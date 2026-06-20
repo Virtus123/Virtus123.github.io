@@ -1,16 +1,6 @@
 const PROJECTS = [
   {
     featured: true,
-    icon: '🔐',
-    title: 'Acess Control',
-    description:
-      'Sistema SaaS multi-tenant de controle de acesso físico para condomínios, empresas e revendas. Gerencia pessoas, visitantes, veículos, equipamentos biométricos, regras de acesso, estacionamento e relatórios operacionais.',
-    tags: ['Node.js', 'Express', 'SQLite', 'JWT', 'Swagger', 'PWA'],
-    github: 'https://github.com/Virtus123/Acess-Control',
-    demo: 'https://virtus123.github.io/Acess-Control/',
-  },
-  {
-    featured: true,
     icon: '🖥️',
     title: 'MAMDesk',
     description:
@@ -57,6 +47,15 @@ const PROJECTS = [
   },
 ];
 
+const EXTRA_EXPERIENCE = {
+  icon: '🔐',
+  title: 'Sistema de controle de acesso (SaaS)',
+  period: 'Experiência profissional anterior',
+  description:
+    'Atuei no desenvolvimento de um sistema SaaS multi-tenant para controle de acesso físico — backend Node.js, PWA, regras de acesso, relatórios e integrações com equipamentos. Projeto de contexto corporativo; não faz parte do meu portfólio open source principal.',
+  tags: ['Node.js', 'Express', 'SQLite', 'JWT', 'PWA', 'Multi-tenant'],
+};
+
 function renderProjects() {
   const grid = document.getElementById('projectsGrid');
   if (!grid) return;
@@ -101,6 +100,27 @@ function renderProjects() {
   }).join('');
 
   observeReveal(grid.querySelectorAll('.reveal'));
+}
+
+function renderExtraExperience() {
+  const container = document.getElementById('extraExperience');
+  if (!container) return;
+
+  const tagsHtml = EXTRA_EXPERIENCE.tags.map((t) => `<span>${t}</span>`).join('');
+
+  container.innerHTML = `
+    <article class="experience-card reveal">
+      <div class="experience-card__icon" aria-hidden="true">${EXTRA_EXPERIENCE.icon}</div>
+      <div class="experience-card__body">
+        <span class="experience-card__label">${EXTRA_EXPERIENCE.period}</span>
+        <h3>${EXTRA_EXPERIENCE.title}</h3>
+        <p>${EXTRA_EXPERIENCE.description}</p>
+        <div class="tags">${tagsHtml}</div>
+      </div>
+    </article>
+  `;
+
+  observeReveal(container.querySelectorAll('.reveal'));
 }
 
 function observeReveal(elements) {
@@ -150,12 +170,13 @@ function initContactForm() {
 }
 
 function initScrollReveal() {
-  observeReveal(document.querySelectorAll('.reveal:not(.project-card)'));
+  observeReveal(document.querySelectorAll('.reveal:not(.project-card):not(.experience-card)'));
 }
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
 renderProjects();
+renderExtraExperience();
 initNav();
 initContactForm();
 initScrollReveal();
