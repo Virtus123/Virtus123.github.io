@@ -8,6 +8,7 @@ const PROJECTS = [
     tags: ['Node.js', 'Express', 'SQLite', 'JWT', 'Swagger', 'PWA'],
     github: 'https://github.com/Virtus123/Acess-Control',
     demo: null,
+    demoNote: 'Backend self-hosted',
   },
   {
     featured: true,
@@ -26,7 +27,7 @@ const PROJECTS = [
       'Plataforma educacional interativa com quizzes, níveis de dificuldade, autenticação de usuários e integração com IA. Backend REST completo com SQLite.',
     tags: ['Node.js', 'Express', 'SQLite', 'REST API'],
     github: 'https://github.com/Virtus123/back-end-plataforma-educacional',
-    demo: 'https://back-end-plataforma-educacional.onrender.com/',
+    demo: 'https://virtus123.github.io/back-end-plataforma-educacional/',
   },
   {
     icon: '📡',
@@ -44,7 +45,7 @@ const PROJECTS = [
       'Assistente web de orientação espiritual com chat interativo, versículos bíblicos e respostas geradas por inteligência artificial via Google Gemini.',
     tags: ['Node.js', 'Express', 'Google Gemini', 'IA'],
     github: 'https://github.com/Virtus123/Ruah',
-    demo: null,
+    demo: 'https://virtus123.github.io/Ruah/',
   },
   {
     icon: '🌱',
@@ -53,7 +54,7 @@ const PROJECTS = [
       'Site educativo sobre práticas agrícolas sustentáveis — projeto desenvolvido para a Olimpíada Agrinho de programação.',
     tags: ['HTML5', 'CSS3', 'Responsivo'],
     github: 'https://github.com/Virtus123/Descomplicando-O-Agro',
-    demo: null,
+    demo: 'https://virtus123.github.io/Descomplicando-O-Agro/',
   },
 ];
 
