@@ -7,8 +7,7 @@ const PROJECTS = [
       'Sistema SaaS multi-tenant de controle de acesso físico para condomínios, empresas e revendas. Gerencia pessoas, visitantes, veículos, equipamentos biométricos, regras de acesso, estacionamento e relatórios operacionais.',
     tags: ['Node.js', 'Express', 'SQLite', 'JWT', 'Swagger', 'PWA'],
     github: 'https://github.com/Virtus123/Acess-Control',
-    demo: null,
-    demoNote: 'Backend self-hosted',
+    demo: 'https://virtus123.github.io/Acess-Control/',
   },
   {
     featured: true,
